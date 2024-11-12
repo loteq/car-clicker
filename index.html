@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>Car Clicker by Loqan Labs</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#39c">
+    <link rel="apple-touch-icon" href="img/icon-512.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#39c">
+    <meta name="apple-mobile-web-app-title" content="Car Clicker by Loqan">
+    <meta name="msapplication-TileImage" content="img/icon-512.png">
+    <meta name="msapplication-TileColor" content="#f8f8f8">
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ("serviceWorker" in navigator) { navigator.serviceWorker.register("sw.js"); }
+    </script>
+    <link href="css/style.css" rel=stylesheet>
+    <script src="js/app.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+        <div>
+          <h1>Car Clicker</h1>
+        </div>
+    </header>
+    <div>
+    <nav>
+      <ul id="car-list"></ul>
+    </nav>
+    <main id="car">
+      <figure>
+        <img src="" id="car-img" alt="muscle car">
+        <figcaption><h2 id="car-name"></h2><p>Vote count: <span id="car-count"></span></p></figcaption>
+      </figure> 
+    </main>
+    </div>
+  <footer>
+    <small>Copyright &copy; <script>document.write(new Date().getFullYear());</script> Andreas Loqvist</small>
+  </footer>
+  </body>
+</html>
