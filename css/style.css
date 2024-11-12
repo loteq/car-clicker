@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	outline: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: customFont-regular;
+	src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: customFont-bold;
+	src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+html {
+	--page-color: #f8f8f8;
+	--ink-color: #333;
+	--nav-border-color: #999;
+	--nav-hover-color: #efefef;
+	--figcaption-color: rgba(255,255,255,0.6);
+	--header-color: #ddd;
+	-webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        --page-color: #222;
+        --ink-color: #ccc;
+		--nav-border-color: #666;
+		--nav-hover-color: #1c1c1c;
+		--figcaption-color: rgba(0,0,0,0.6);
+		--header-color: #111;
+    }
+
+	img {
+    	filter: brightness(.8) contrast(1.1);
+	}
+
+}
+
+body {
+	background-color: var(--page-color);
+	color: var(--ink-color);
+	font-family: customFont-regular;
+}
+
+div {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 900px;
+	padding: 0 20px;
+	width: 100%;
+}
+
+header {
+	background-color: var(--header-color);
+	padding: 10px;
+	text-align: center;
+}
+
+nav {
+	border: solid 1px var(--nav-border-color);
+	border-radius: 10px;
+	margin: 20px 0;
+	padding: 10px;
+}
+
+h1, h2 {
+	font-family: customFont-bold;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+ul {
+	display: inline;
+	list-style-type: none;
+	text-align: center;
+}
+
+li {
+	line-height: 2.2em;
+	border-bottom: dashed 1px var(--nav-border-color);
+}
+
+li:last-of-type {
+	border: none;
+}
+
+figure {
+	position: relative;
+}
+
+img {
+	border-radius: 10px;
+	width: 100%;
+ 	vertical-align: middle;
+}
+
+figcaption {
+	background-color: var(--figcaption-color);
+	border-radius: 0 0 10px 10px;
+	box-sizing: border-box;
+	color: var(--ink-color);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+footer {
+	padding: 50px 0 20px;
+	text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+
+	header {
+		text-align: left;
+	}
+
+	figcaption {
+		text-align: right;
+	}
+
+	h1 {
+		margin-left: 10px;
+	}
+
+	li:hover {
+		background-color: var(--nav-hover-color);
+	}
+
+	li:first-of-type:hover {
+		border-radius: 8px 8px 0 0;
+	}
+
+	li:last-of-type:hover {
+		border-radius: 0 0 8px 8px;
+	}
+
+}
